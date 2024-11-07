@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Document</title>
+    </head>
+<body>
+    <header>
+        <center><h1>Konwerter Jednostek</header>/h1></center>
+    </header>
+    <script>
+        document.write('Witam w konwerterze!');
+
+      
+        let jednostka = prompt('Na jaką jednostkę chcesz przeliczyć - km czy mila ?'))
+        switch (jednostka) {
+            case "km":
+                let number1 = parseFloat(prompt('Wprowadź liczbe:'));
+                while (isNaN(number1)){
+                    let number1 = parseFloat(prompt('Wprowadź liczbe:'));
+                }
+            let przelicznik_1 = number1 * 0.621371192
+            document.write(przelicznik_1)
+
+            break;
+
+            case "mila":
+                let number2 = parseFloat(prompt('Wprowadź liczbe:'));
+                while (isNaN(number2)){
+                    let number2 = parseFloat(prompt('Wprowadź liczbe:'));
+                }
+            let przelicznik_2 = number2 * 1.609344
+            document.write(przelicznik_2)
+
+            break;
+                   
+            default:
+                document.write('Nieznana jednostka - błąd')
+            
+                break;
+        }
+        
+    </script>
+</body> 
+</html>
