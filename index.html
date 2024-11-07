@@ -2,44 +2,39 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Document</title>
-    </head>
+    <title>Konwerter Osobisty</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 <body>
     <header>
-        <center><h1>Konwerter Jednostek</header>/h1></center>
+        <center><h1>Konwerter Jednostek</h1></center>
     </header>
     <script>
-        document.write('Witam w konwerterze!');
 
-      
-        let jednostka = prompt('Na jaką jednostkę chcesz przeliczyć - km czy mila ?'))
+        let jednostka = prompt('Na jaką jednostkę chcesz przeliczyć - km czy mila ?');
         switch (jednostka) {
             case "km":
-                let number1 = parseFloat(prompt('Wprowadź liczbe:'));
-                while (isNaN(number1)){
-                    let number1 = parseFloat(prompt('Wprowadź liczbe:'));
+                let number1 = parseFloat(prompt('Wprowadź liczbę:'));
+                while (isNaN(number1)) {
+                    number1 = parseFloat(prompt('Wprowadź liczbę:'));
                 }
-            let przelicznik_1 = number1 * 0.621371192
-            document.write(przelicznik_1)
-
-            break;
+                let przelicznik_1 = number1 * 0.621371192;
+                document.write("Podana liczba: " + number1 + " w przeliczeniu na mile to " + przelicznik_1 + " mili / mil.");
+                break;
 
             case "mila":
-                let number2 = parseFloat(prompt('Wprowadź liczbe:'));
-                while (isNaN(number2)){
-                    let number2 = parseFloat(prompt('Wprowadź liczbe:'));
+                let number2 = parseFloat(prompt('Wprowadź liczbę:'));
+                while (isNaN(number2)) {
+                    number2 = parseFloat(prompt('Wprowadź liczbę:'));
                 }
-            let przelicznik_2 = number2 * 1.609344
-            document.write(przelicznik_2)
+                let przelicznik_2 = number2 * 1.609344;
+                document.write("Podana liczba: " + number2 + " w przeliczeniu na kilometry to " + przelicznik_2 + " km.");
+                break;
 
-            break;
-                   
             default:
-                document.write('Nieznana jednostka - błąd')
-            
+                document.write('Nieznana jednostka - błąd');
                 break;
         }
-        
     </script>
-</body> 
+</body>
 </html>
